@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -25,7 +26,8 @@ SECRET_KEY = 'django-insecure-j(_ndr0ogwxhh-n*!0be4bmp#c@&&3@!lz+3@e)0l#m=2@(x7e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['your-render-subdomain.onrender.com', 'localhost']
+
 
 
 # Application definition
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'loginproject.urls'
@@ -128,3 +131,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vishal.23bai11322@vitbhopal.ac.in'           # ✅ Your Gmail
 EMAIL_HOST_PASSWORD = 'yaga meeh jzrg iruk'    # ✅ Your App Password (not normal password)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
