@@ -1,0 +1,6 @@
+<form method="POST">
+    {% csrf_token %}
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="yourid@vitbhopal.ac.in" required />
+    <button type="submit">Send OTP</button>
+</form>
