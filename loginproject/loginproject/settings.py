@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j(_ndr0ogwxhh-n*!0be4bmp#c@&&3@!lz+3@e)0l#m=2@(x7e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['your-render-subdomain.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['accounts.onrender.com', 'localhost']
 
 
 
@@ -132,3 +132,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vishal.23bai11322@vitbhopal.ac.in'           # ✅ Your Gmail
 EMAIL_HOST_PASSWORD = 'yaga meeh jzrg iruk'    # ✅ Your App Password (not normal password)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
